@@ -1,44 +1,42 @@
 import React from "react";
 import "./App.css";
+import Accordion from "./components/Accordion/Accordion";
+import Rating from "./components/Rating/Rating";
 
-function hello() {
-  debugger;
-  alert("Hello world");
-}
+// function hello() {
+//     debugger;
+//     alert("Hello world");
+// }
+
 // hello();
 
 function App() {
-  return (
-    <div>
-      Hello world
-      <Ration />
-      <Accordion />
-    </div>
-  );
+    return (
+        <div>
+            <PageTitle title={'This is APP component'}/>
+            <PageTitle title={'React JS'}/>
+            <PageTitle title={' chapter 456'}/>
+            <div>Article 1</div>
+            <Rating value={1}/>
+            <Accordion titleValue={'Menue 1'} collapsed={true}/>
+            <Accordion titleValue={'Menue 2'} collapsed={false}/>
+
+            <div>Article 2</div>
+            <Rating value={2}/>
+            <Rating value={0}/>
+            <Rating value={5}/>
+
+
+        </div>
+    );
 }
 
-function Ration() {
-  return (
-    <div>
-      <div>star</div>
-      <div>star</div>
-      <div>star</div>
-      <div>star</div>
-      <div>star</div>
-    </div>
-  );
+type PageTitlePropsType = {
+    title: string;
 }
 
-function Accordion() {
-  return (
-    <div>
-      <h3>Menu</h3>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </div>
-  );
+function PageTitle(props: PageTitlePropsType) {
+    return <h1>{props.title}</h1>
 }
+
 export default App;
