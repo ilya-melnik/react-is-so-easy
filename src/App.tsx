@@ -13,18 +13,24 @@ import Rating from "./components/Rating/Rating";
 function App() {
     return (
         <div>
-            <PageTitle title={'This is APP component'}/>
-            <PageTitle title={'React JS'}/>
-            <PageTitle title={' chapter 456'}/>
-            <div>Article 1</div>
-            <Rating value={1}/>
+            {/*<PageTitle title={'This is APP component'}/>*/}
+            {/*<PageTitle title={'React JS'}/>*/}
+            {/*<PageTitle title={' chapter 456'}/>*/}
+            {/*<div>Article 1</div>*/}
+            {/*<Rating value={1}/>*/}
+
             <Accordion titleValue={'Menue 1'} collapsed={true}/>
             <Accordion titleValue={'Menue 2'} collapsed={false}/>
-
-            <div>Article 2</div>
-            <Rating value={2}/>
             <Rating value={0}/>
+            <Rating value={1}/>
+
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
             <Rating value={5}/>
+
+
+            {/*<div>Article 2</div>*/}
 
 
         </div>
