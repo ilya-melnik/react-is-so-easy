@@ -7,6 +7,7 @@ type StarPropsType = {
 
 export function Rating(props: RatingProps) {
     return<div>
+
         <Star selected={props.value > 0}/>
         <Star selected={props.value > 1}/>
         <Star selected={props.value > 2}/>
