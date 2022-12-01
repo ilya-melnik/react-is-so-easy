@@ -26,7 +26,6 @@ export function Rating() {
 
 function Star(props: StarPropsType) {
     const selectedStarted = () => {
-
         props.setSelectedValue(props.value)
     }
 

@@ -40,7 +40,6 @@ function AccordionBody() {
         </ul>
     );
 }
-
 export default UncontrolledAccordion;
 
 

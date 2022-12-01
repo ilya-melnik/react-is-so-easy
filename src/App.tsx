@@ -25,7 +25,6 @@ function App() {
             {/*<div>Article 1</div>*/}
             {/*<Rating value={1}/>*/}
 
-
             {/*<Accordion titleValue={'Menue 1'} collapsed={true}/>*/}
             {/*<Accordion titleValue={'Menue 2'} collapsed={false}/>*/}
 
