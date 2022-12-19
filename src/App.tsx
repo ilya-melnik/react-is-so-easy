@@ -10,20 +10,21 @@ import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRati
 
 function App() {
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    // let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let [valueAccordion, setValueAccordion] = useState(true)
     return (
         <div className={'App'} >
 
-            <Rating  value={ratingValue}  onClick={setRatingValue}/>
-
+            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={setValueAccordion}/>
+            {/*<Rating  value={ratingValue}  onClick={setRatingValue}/>*/}
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}
             {/*<PageTitle title={' chapter 456'}/>*/}
             {/*<div>Article 1</div>*/}
             {/*<Rating value={1}/>*/}
 
-            {/*<Accordion titleValue={'Menue 1'} collapsed={true}/>*/}
-            {/*<Accordion titleValue={'Menue 2'} collapsed={false}/>*/}
+
+            {/*<Accordion titleValue={'Menu 2'} collapsed={false}/>*/}
 
             {/*<Rating value={1}/>*/}
 
