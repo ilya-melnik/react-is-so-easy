@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
-import Rating from "./components/Rating/Rating";
+import Rating, {RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import * as buffer from "buffer";
 import UncontrolledAccordion from "./components/UnconrolledAccordion/UncontrolledAccordion";
@@ -10,8 +10,11 @@ import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRati
 
 function App() {
 
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     return (
         <div className={'App'} >
+
+            <Rating  value={ratingValue}  onClick={setRatingValue}/>
 
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}
@@ -28,13 +31,13 @@ function App() {
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
-            <Rating />
-            <OnOff/>
-            <OnOff/>
 
-             <UncontrolledRating />
-            <UncontrolledAccordion titleValue={'Menue 1'}/>
-            <UncontrolledAccordion titleValue={'Menue 2'}/>
+            {/*<OnOff/>*/}
+            {/*<OnOff/>*/}
+
+             {/*<UncontrolledRating />*/}
+            {/*<UncontrolledAccordion titleValue={'Menue 1'}/>*/}
+            {/*<UncontrolledAccordion titleValue={'Menue 2'}/>*/}
 
             {/*<div>Article 2</div>*/}
 
