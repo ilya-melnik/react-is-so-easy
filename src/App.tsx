@@ -8,13 +8,6 @@ import UncontrolledAccordion from "./components/UnconrolledAccordion/Uncontrolle
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 
 
-// function hello() {
-//     debugger;
-//     alert("Hello world");
-// }
-
-// hello();
-
 function App() {
 
     return (
