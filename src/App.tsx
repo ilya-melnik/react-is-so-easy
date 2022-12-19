@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
 import Rating from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import * as buffer from "buffer";
 import UncontrolledAccordion from "./components/UnconrolledAccordion/UncontrolledAccordion";
+import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 
 
 // function hello() {
@@ -17,8 +18,8 @@ import UncontrolledAccordion from "./components/UnconrolledAccordion/Uncontrolle
 function App() {
 
     return (
-        <div>
-            <Rating />
+        <div className={'App'} >
+
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}
             {/*<PageTitle title={' chapter 456'}/>*/}
@@ -34,10 +35,11 @@ function App() {
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
-
+            <Rating />
             <OnOff/>
             <OnOff/>
 
+             <UncontrolledRating />
             <UncontrolledAccordion titleValue={'Menue 1'}/>
             <UncontrolledAccordion titleValue={'Menue 2'}/>
 
