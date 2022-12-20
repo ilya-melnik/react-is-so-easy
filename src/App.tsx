@@ -12,10 +12,11 @@ function App() {
 
     // let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     let [valueAccordion, setValueAccordion] = useState(true)
+    // let[on,setOn] =useState(true)
     return (
         <div className={'App'} >
-
-            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={setValueAccordion}/>
+            {/*<OnOff on={on} callback={setOn}/>*/}
+            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={()=>{setValueAccordion(!valueAccordion)}}/>
             {/*<Rating  value={ratingValue}  onClick={setRatingValue}/>*/}
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}
