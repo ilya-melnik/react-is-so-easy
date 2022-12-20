@@ -6,19 +6,23 @@ import OnOff from "./components/OnOff/OnOff";
 import * as buffer from "buffer";
 import UncontrolledAccordion from "./components/UnconrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
+import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 
 function App() {
 
-    // let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-    // let [valueAccordion, setValueAccordion] = useState(true)
-
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let [valueAccordion, setValueAccordion] = useState(true)
     let[on,setOn] =useState(true)
+
     return (
         <div className={'App'} >
+            <UncontrolledOnOff />
             <OnOff on={on} callback={()=>{setOn(!on)}}/>
-            {/*<Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={()=>{setValueAccordion(!valueAccordion)}}/>*/}
-            {/*<Rating  value={ratingValue}  onClick={setRatingValue}/>*/}
+            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={()=>{setValueAccordion(!valueAccordion)}}/>
+            <Rating  value={ratingValue}  onClick={setRatingValue}/>
+            <UncontrolledAccordion titleValue={'Menu 1'}/>
+
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}
             {/*<PageTitle title={' chapter 456'}/>*/}
@@ -39,7 +43,7 @@ function App() {
             {/*<OnOff/>*/}
 
              {/*<UncontrolledRating />*/}
-            {/*<UncontrolledAccordion titleValue={'Menu 1'}/>*/}
+
             {/*<UncontrolledAccordion titleValue={'Menu 2'}/>*/}
 
             {/*<div>Article 2</div>*/}
