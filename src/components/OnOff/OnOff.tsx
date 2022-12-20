@@ -1,16 +1,16 @@
 import React, {MouseEvent, useState} from 'react';
 
-type PropsType = {
-    // on: boolean
-    // callback: (on: boolean) => void
+type PropsOnOffType = {
+    on: boolean
+    callback: () => void
 
 }
-const OnOff = (props: PropsType) => {
-    let[on,setOn] =useState(true)
+const OnOff = (props: PropsOnOffType) => {
 
-    const ChangeOnOff = (e: MouseEvent<HTMLDivElement>) => {
-        setOn(!on)
-    }
+
+    // const ChangeOnOff = (e: MouseEvent<HTMLDivElement>) => {
+    //     props.callback(!props.on)
+    // }
 
     const onStyle = {
         width: '30px',
@@ -18,7 +18,7 @@ const OnOff = (props: PropsType) => {
         border: '1px solid black',
         display: 'inline-block',
         padding: '2px',
-        backgroundColor: on ? "green" : "white",
+        backgroundColor: props.on ? "green" : "white",
     }
     const offStyle = {
         width: '30px',
@@ -27,7 +27,7 @@ const OnOff = (props: PropsType) => {
         display: 'inline-block',
         marginLeft: '2px',
         padding: '2px',
-        backgroundColor: !on ? "red" : "white",
+        backgroundColor: !props.on ? "red" : "white",
     }
     const indicatorStyle = {
         width: '10px',
@@ -36,15 +36,15 @@ const OnOff = (props: PropsType) => {
         border: '1px solid black',
         display: 'inline-block',
         marginLeft: '5px',
-        backgroundColor: on ? "green" : "red",
+        backgroundColor: props.on ? "green" : "red",
     }
 
 
 
     return (
         <div>
-            <div onClick={ChangeOnOff} className={'on'} style={onStyle}>On</div>
-            <div onClick={ChangeOnOff} className={'off'} style={offStyle}>Off</div>
+            <div onClick={props.callback} className={'on'} style={onStyle}>On</div>
+            <div onClick={props.callback} className={'off'} style={offStyle}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     );
