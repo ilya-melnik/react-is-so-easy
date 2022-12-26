@@ -1,15 +1,15 @@
-import React, {MouseEvent, useState} from 'react';
+import React, {useState} from 'react';
 
 type PropsType = {
-    // on: boolean
-    // callback: (on: boolean) => void
+    onChange: (on: boolean) => void
 
 }
 const UncontrolledOnOff = (props: PropsType) => {
     let[on,setOn] =useState(true)
 
-    const ChangeOnOff = (e: MouseEvent<HTMLDivElement>) => {
+    const ChangeOnOff = () => {
         setOn(!on)
+        props.onChange(on)
     }
 
     const onStyle = {
@@ -43,8 +43,8 @@ const UncontrolledOnOff = (props: PropsType) => {
 
     return (
         <div>
-            <div onClick={ChangeOnOff} className={'on'} style={onStyle}>On</div>
-            <div onClick={ChangeOnOff} className={'off'} style={offStyle}>Off</div>
+            <div onClick={ChangeOnOff} style={onStyle}>On</div>
+            <div onClick={ChangeOnOff}  style={offStyle}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     );

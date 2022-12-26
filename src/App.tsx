@@ -17,11 +17,13 @@ function App() {
 
     return (
         <div className={'App'} >
-            <UncontrolledOnOff />
-            <OnOff on={on} callback={()=>{setOn(!on)}}/>
-            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={()=>{setValueAccordion(!valueAccordion)}}/>
-            <Rating  value={ratingValue}  onClick={setRatingValue}/>
-            <UncontrolledAccordion titleValue={'Menu 1'}/>
+            <UncontrolledOnOff onChange={setOn}/>  {on.toString()}
+
+            {/*<Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={()=>{setValueAccordion(!valueAccordion)}}/>*/}
+            {/*<Rating  value={ratingValue}  onClick={setRatingValue}/>*/}
+            {/*<UncontrolledAccordion titleValue={'Menu 1'}/>*/}
+
+            {/*<OnOff on={on} callback={()=>{setOn(!on)}}/>*/}
 
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}
