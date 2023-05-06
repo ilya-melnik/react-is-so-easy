@@ -1,4 +1,4 @@
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string;
     collapsed: boolean
     onClick: () => void
