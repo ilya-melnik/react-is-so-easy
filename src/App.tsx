@@ -3,7 +3,6 @@ import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
 import Rating, {RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
-import * as buffer from "buffer";
 import UncontrolledAccordion from "./components/UnconrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
@@ -19,11 +18,13 @@ function App() {
         <div className={'App'} >
             <UncontrolledOnOff onChange={setOn}/>  {on.toString()}
 
-            {/*<Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={()=>{setValueAccordion(!valueAccordion)}}/>*/}
-            {/*<Rating  value={ratingValue}  onClick={setRatingValue}/>*/}
-            {/*<UncontrolledAccordion titleValue={'Menu 1'}/>*/}
+            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={(e)=>{
 
-            {/*<OnOff on={on} callback={()=>{setOn(!on)}}/>*/}
+                setValueAccordion(!valueAccordion)}} item={['Illia', 'Nina', 'Evelina']}/>
+            <Rating  value={ratingValue}  onClick={setRatingValue}/>
+            <UncontrolledAccordion titleValue={'Menu 1'}/>
+
+            <OnOff on={on} callback={()=>{setOn(!on)}}/>
 
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'React JS'}/>*/}

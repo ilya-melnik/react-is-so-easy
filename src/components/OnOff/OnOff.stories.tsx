@@ -5,7 +5,13 @@ import OnOff from "./OnOff";
 
 export default {
     title: 'OnOff',
-    component: OnOff
+    component: OnOff,
+    argTypes: {
+        variant: {
+            options: ['On', 'Off'],
+            control: { type: 'radio' },
+        },
+    },
 }
 
 const callback = action('on or off clicked')
@@ -18,6 +24,7 @@ export const ModeChanging = () => {
     return <>
 
         <OnOff on={value} callback={()=>setValue(!value)}/>
+    {/*    'on or off clicked')  ---  как отображать в режиме mode*/}
 
     </>
 }
