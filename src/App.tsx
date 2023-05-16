@@ -6,62 +6,51 @@ import OnOff from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/UnconrolledAccordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import Select from "./components/Select/Select";
 
 
 function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     let [valueAccordion, setValueAccordion] = useState(true)
-    let[on,setOn] =useState(true)
+    let [on, setOn] = useState(true)
 
+    const onClickItem = () => {}
+    // const onChangeSelect = () => {}
+    // let [select, setSelect] = useState<boolean>(false)
+    // const onClick = () => {
+    //     setSelect(!select)
+    // }
     return (
-        <div className={'App'} >
-            <UncontrolledOnOff onChange={setOn}/>  {on.toString()}
+        <div className={'App'}>
+            <UncontrolledOnOff onChange={setOn}/> {on.toString()}
 
-            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={(e)=>{
+            <Accordion titleValue={'Menu 1'} collapsed={valueAccordion} onClick={(e) => {
 
-                setValueAccordion(!valueAccordion)}} item={['Illia', 'Nina', 'Evelina']}/>
-            <Rating  value={ratingValue}  onClick={setRatingValue}/>
+                setValueAccordion(!valueAccordion)
+            }} item={[{title: 'Illia', value: 1}, {title: 'Nina', value: 2}, {
+                title: 'Evelina',
+                value: 3
+            }, {title: 'Vova', value: 4}]} onClickItem={onClickItem}/>
+
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledAccordion titleValue={'Menu 1'}/>
 
-            <OnOff on={on} callback={()=>{setOn(!on)}}/>
-
-            {/*<PageTitle title={'This is APP component'}/>*/}
-            {/*<PageTitle title={'React JS'}/>*/}
-            {/*<PageTitle title={' chapter 456'}/>*/}
-            {/*<div>Article 1</div>*/}
-            {/*<Rating value={1}/>*/}
+            <OnOff on={on} callback={() => {
+                setOn(!on)
+            }}/>
 
 
-            {/*<Accordion titleValue={'Menu 2'} collapsed={false}/>*/}
+            {/*<Select select={select}  onClick={onClick} value={1} onChange={onChangeSelect} item={[*/}
+            {/*    {title: 'Illia', value: 1},*/}
+            {/*    {title: 'Nina', value: 2},*/}
+            {/*    {title: 'Evelina', value: 3},*/}
+            {/*    {title: 'Vova', value: 4}]}*/}
 
-            {/*<Rating value={1}/>*/}
-
-            {/*<Rating value={2}/>*/}
-            {/*<Rating value={3}/>*/}
-            {/*<Rating value={4}/>*/}
-            {/*<Rating value={5}/>*/}
-
-            {/*<OnOff/>*/}
-            {/*<OnOff/>*/}
-
-             {/*<UncontrolledRating />*/}
-
-            {/*<UncontrolledAccordion titleValue={'Menu 2'}/>*/}
-
-            {/*<div>Article 2</div>*/}
-
+            {/*/>*/}
 
         </div>
     );
 }
-
-// type PageTitlePropsType = {
-//     title: string;
-// }
-//
-// function PageTitle(props: PageTitlePropsType) {
-//     return <h1>{props.title} </h1>
-// }
 
 export default App;
